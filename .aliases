@@ -11,15 +11,14 @@ function cdl() #cd and ls in 1 command
 
 alias ls='ls -lpFh --color=auto'
 alias e='exit'
-alias c='clear'  # also, Ctrl + L works nicely
+alias c='clear'
 alias cp='cp -iv'
 alias mv='mv -iv'
 alias rm='rm -i'
 alias getpublickey='pbcopy < ~/.ssh/id_rsa.pub'
 alias ccat='pygmentize -g'
-alias wanip='dig +short myip.opendns.com @resolver1.opendns.com'
 
-# Typos...
+# Typos
 alias gti='git'
 alias sl='ls'
 alias cd..='cd ..'
@@ -29,9 +28,6 @@ alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
 alias .....='cd ../../../..'
-
-# Refresh shell
-alias reload='source ~/.bash_profile'
 
 alias agi='sudo apt-get install'
 alias agr='sudo apt-get remove'
@@ -43,6 +39,5 @@ alias mv='mv -iv'
 alias rm='rm -i'
 alias rmd='rm -rf'  # deleting directories
 
-alias pingoo='ping google.com'	# comes in handy
-alias myip='dig +short myip.opendns.com @resolver1.opendns.com' #find your public ip
-
+alias pingoo='ping google.com'
+alias wanip='dig +short myip.opendns.com @resolver1.opendns.com'
