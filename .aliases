@@ -1,22 +1,19 @@
-function cdl() #cd and ls in 1 command
-{
-	if [ -d "$1" ]; then
-		cd "$1"
-		ls -l --color=auto
-	elif [ -f "$1" ]; then
-		echo "$1 is not a directory"
-	else echo "No directory named $1"
-	fi
-}
-
+# List files colorized
 alias ls='ls -lpFh --color=auto'
+# List files colorized, including dot files
+alias la='ls -lpFh --color=auto'
+
+# Always enable colored `grep` output
+alias grep='grep --color=auto '
+
+# Shortcuts
 alias e='exit'
 alias c='clear'
+
+# Interactive and verbose copy, move and remove
 alias cp='cp -iv'
 alias mv='mv -iv'
-alias rm='rm -i'
-alias getpublickey='pbcopy < ~/.ssh/id_rsa.pub'
-alias ccat='pygmentize -g'
+alias rm='rm -iv'
 
 # Typos
 alias gti='git'
@@ -29,15 +26,18 @@ alias ...='cd ../..'
 alias ....='cd ../../..'
 alias .....='cd ../../../..'
 
+# Ubuntu specific
 alias agi='sudo apt-get install'
 alias agr='sudo apt-get remove'
 alias agu='sudo apt-get update'
 alias agp='sudo apt-get purge'
 
-alias cp='cp -iv'  # interactive (asking) and verbose
-alias mv='mv -iv'
-alias rm='rm -i'
-alias rmd='rm -rf'  # deleting directories
-
+# Ping google.com for connectivity checks
 alias pingoo='ping google.com'
-alias wanip='dig +short myip.opendns.com @resolver1.opendns.com'
+
+# Get public IP
+alias pubip='dig +short myip.opendns.com @resolver1.opendns.com'
+
+# Linux specific aliases
+alias pbcopy='xclip -selection clipboard'
+alias pbpaste='xclip -selection clipboard -o'
