@@ -1,0 +1,64 @@
+[core]
+    editor = vim
+    excludesfile = ~/.gitignore
+
+[user]
+    name = Chris Aslanoglou
+    email = chris.aslanoglou@gmail.com
+
+[alias]
+
+    # Undo latest (local) commit
+    undo-commit = reset --soft HEAD~1
+
+    # status shorthand
+    st = status
+
+    # Pretty printed log graph with relateive dates
+    plog = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+
+    # Show diff for staged files
+    diffca = diff --cached
+
+    # Switch to a branch, creating it if necessary
+    go = "!f() { git checkout -b \"$1\" 2> /dev/null || git checkout \"$1\"; }; f"
+
+[apply]
+    # Detect whitespace errors when applying a patch
+    whitespace = fix
+
+[color]
+    ui = auto
+
+[credential]
+    helper = cache --timeout=3600
+
+[help]
+    # Automatically correct and execute mistyped commands
+    autocorrect = 1
+
+[mergetool]
+    keepTemporaries = false
+
+[diff]
+    tool = meld
+
+[difftool]
+    prompt = false
+
+[difftool "meld"]
+    trustExitCode = true
+    cmd = open -W -a Meld --args \"$LOCAL\" \"$PWD/$REMOTE\"
+
+[merge]
+    tool = meld
+
+[mergetool]
+    prompt = false
+
+[mergetool "meld"]
+    trustExitCode = true
+    cmd = open -W -a Meld --args --auto-merge \"$PWD/$LOCAL\" \"$PWD/$BASE\" \"$PWD/$REMOTE\" --output=\"$PWD/$MERGED\"
+
+[format]
+    signoff = true
