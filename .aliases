@@ -1,7 +1,7 @@
 # List files colorized
 alias ls='ls -lpFh --color=auto'
 # List files colorized, including dot files
-alias la='ls -lpFh --color=auto'
+alias la='ls -alpFh --color=auto'
 
 # Always enable colored `grep` output
 alias grep='grep --color=auto '
