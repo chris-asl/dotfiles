@@ -1,0 +1,28 @@
+# https://github.com/iberianpig/fusuma
+swipe:
+  3:
+    left:
+      command: "xdotool key ctrl+Page_Down"
+    right:
+      command: "xdotool key ctrl+Page_Up"
+  4:
+    left:
+      command: "xdotool key ctrl+alt+Right"
+    right:
+      command: "xdotool key ctrl+alt+Left"
+    up:
+      command: "xdotool key Super"
+    down:
+      command: "xdotool key Super"
+pinch:
+  in:
+    command: 'xdotool keydown ctrl click 4 keyup ctrl'
+  out:
+    command: 'xdotool keydown ctrl click 5 keyup ctrl'
+
+threshold:
+  pinch: 0.5
+
+interval:
+  swipe: 0.75
+  pinch: 0.5
