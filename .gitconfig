@@ -4,7 +4,7 @@
 
 [user]
     name = Chris Aslanoglou
-    email = chris.aslanoglou@gmail.com
+	email = caslanoglou@ubitech.eu
 
 [alias]
 
@@ -15,7 +15,7 @@
     st = status
 
     # Pretty printed log graph with relateive dates
-    plog = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+    plog = log --graph --abbrev-commit --pretty=format:'%C(bold blue)%h%C(reset) -%C(bold yellow)%d%C(reset) %C(white)%s%C(reset) %C(bold green)(%cr) %C(dim white)<%an>%C(reset)'
 
     # Show diff for staged files
     diffca = diff --cached
