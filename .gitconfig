@@ -20,6 +20,12 @@
     # Show diff for staged files
     diffca = diff --cached
 
+    # Amend the HEAD commit without editing its commit message
+    cane = commit --amend --no-edit
+
+    # Rebase continue
+    rec = rebase --continue
+
     # Switch to a branch, creating it if necessary
     go = "!f() { git checkout -b \"$1\" 2> /dev/null || git checkout \"$1\"; }; f"
 
