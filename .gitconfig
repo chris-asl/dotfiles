@@ -20,6 +20,10 @@
     # Show diff for staged files
     diffca = diff --cached
 
+    # Use diff-so-fancy for diff
+    dsf = diff --color
+    dsfca = diff --cached --color
+
     # Amend the HEAD commit without editing its commit message
     cane = commit --amend --no-edit
 
@@ -28,6 +32,7 @@
 
     # Switch to a branch, creating it if necessary
     go = "!f() { git checkout -b \"$1\" 2> /dev/null || git checkout \"$1\"; }; f"
+
 
 [apply]
     # Detect whitespace errors when applying a patch
@@ -68,3 +73,7 @@
 
 [format]
     signoff = true
+
+[pager]
+    dsf = diff-so-fancy | less --tabs=4 -RFXS
+    dsfca = diff-so-fancy | less --tabs=4 -RFXS
