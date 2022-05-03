@@ -1,6 +1,7 @@
 [core]
     editor = vim
     excludesfile = ~/.gitignore
+    pager = diff-so-fancy | less --tabs=4 -RFX
 
 [user]
     name = Chris Aslanoglou
@@ -83,3 +84,5 @@
 [pager]
     dsf = diff-so-fancy | less --tabs=4 -RFXS
     dsfca = diff-so-fancy | less --tabs=4 -RFXS
+[interactive]
+	diffFilter = diff-so-fancy --patch
