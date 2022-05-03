@@ -86,5 +86,8 @@
     dsfca = diff-so-fancy | less --tabs=4 -RFXS
 [interactive]
 	diffFilter = diff-so-fancy --patch
+[rerere]
+	enabled = true
+	autoupdate = true
 [pull]
 	rebase = true
