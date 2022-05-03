@@ -14,8 +14,10 @@
     # status shorthand
     st = status
 
-    # Pretty printed log graph with relateive dates
+    # Pretty printed log graph with relative dates
     plog = log --graph --abbrev-commit --pretty=format:'%C(bold blue)%h%C(reset) -%C(bold yellow)%d%C(reset) %C(white)%s%C(reset) %C(bold green)(%cr) %C(dim white)<%an>%C(reset)'
+    # Pretty printed log graph (similar to the above)
+    tree = log --graph --decorate --pretty=oneline --abbrev-commit --date=relative --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset by %C(yellow)%ae%Creset'
 
     # Show diff for staged files
     diffca = diff --cached
